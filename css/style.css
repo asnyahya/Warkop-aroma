@@ -1,0 +1,19 @@
+:root {
+  --bg: #3d404c;
+  --primary: #f2cc7f;
+  --col: #f4f1cd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--col);
+  font-family: 'Ubuntu', sans-serif;
+}
