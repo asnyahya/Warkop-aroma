@@ -15,5 +15,110 @@
 body {
   background-color: var(--bg);
   color: var(--col);
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Lato', sans-serif;
+
+  /* Untuk membuat scroll pada halaman sementara */
+  height: 5000px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(61, 64, 76, 0.8);
+  border-bottom: 0.1rem solid var(--primary);
+  padding: 0.8rem 7%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.navbar .navbar-logo {
+  color: var(--col);
+  font: italic 700 1.7rem 'Ubuntu', sans-serif;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-item a {
+  display: inline-block;
+  color: var(--col);
+  margin: 0 1rem;
+  font-size: 1rem;
+  transition: all .3s linear;
+}
+
+.navbar .navbar-item a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-menu a {
+  color: var(--col);
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-menu a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+
+
+/* Responsive breakpoint */
+/* Laptop */
+@media only screen and (max-width: 1024px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 60%;
+  }
+
+  .navbar .navbar-item {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--primary);
+    width: 50%;
+    height: 100vh;
+    transition: all .3s linear;
+  }
+
+  .navbar .navbar-item.active {
+    right: 0;
+  }
+
+  .navbar .navbar-item a {
+    display: block;
+    color: var(--bg);
+    padding: 1rem 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .navbar .navbar-item a:hover {
+    color: var(--col);
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+}
+
+/* Phoned */
+@media only screen and (max-width: 576px) {
+  html {
+    font-size: 50%;
+  }
 }
