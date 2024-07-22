@@ -71,10 +71,57 @@ body {
 }
 
 
+/* Hero image */
+.hero {
+  display: flex;
+  align-items: center;
+  background: url('../img/es-kopi.jpg') no-repeat center / cover;
+  min-height: 100vh;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  background-image: linear-gradient(0deg, rgba(61, 64, 76, 1) 15%, rgba(255, 255, 255, 0) 60%);
+  width: 100%;
+  height: 30%;
+}
+
+.hero .content {
+  max-width: 60rem;
+  padding: 1rem 5%;
+}
+
+.hero .content h1 {
+  color: var(--primary);
+  font-size: 4rem;
+  text-shadow: 1px 1px 3px rgba(61, 64, 76, 0.5);
+}
+
+.hero .content p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.hero .content .cta {
+  display: inline-block;
+  background-color: var(--col);
+  color: var(--bg);
+  padding: 0.7rem 0.5rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  border-radius: 0.4rem;
+  text-shadow: 1px 1px 2px rgba(242, 204, 127, 0.8);
+}
+
 
 /* Responsive breakpoint */
 /* Laptop */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1335px) {
   html {
     font-size: 75%;
   }
