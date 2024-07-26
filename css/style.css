@@ -118,13 +118,81 @@ body {
   text-shadow: 1px 1px 2px rgba(242, 204, 127, 0.8);
 }
 
+/* About */
+.about {
+  padding: 4rem 7% 1rem;
+}
+
+.about h2 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.about h2 span {
+  color: var(--primary);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about .row .content {
+  flex: 1 1 30rem;
+  padding: 0 1rem;
+}
+
+.about .row .content h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.about .row .content p {
+  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
 
 /* Responsive breakpoint */
 /* Laptop */
-@media only screen and (max-width: 1335px) {
+@media only screen and (max-width: 1024px) {
   html {
     font-size: 75%;
   }
+
+  .about {
+    padding-top: 5rem;
+  }
+
+  .about h2 {
+    margin-bottom: 2.5rem;
+  }
+
+  .about .row .about-img img {
+    height: 40rem;
+  }
+
+  .about .row .content h3 {
+    font-size: 1.9rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.3rem;
+  }
+
 }
 
 /* Tablet */
@@ -150,7 +218,8 @@ body {
   .navbar .navbar-item a {
     display: block;
     color: var(--bg);
-    padding: 1rem 0.5rem;
+    margin: 0 5%;
+    padding: 1rem;
     font-size: 1.5rem;
   }
 
@@ -161,11 +230,28 @@ body {
   #hamburger-menu {
     display: inline-block;
   }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .content {
+    margin-top: 1rem;
+    padding: 0;
+  }
 }
 
 /* Phoned */
 @media only screen and (max-width: 576px) {
   html {
-    font-size: 50%;
+    font-size: 55%;
+  }
+
+  .about .row .content {
+    margin-top: 2.5rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.5rem;
   }
 }
