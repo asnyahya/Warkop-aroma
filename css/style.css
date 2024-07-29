@@ -12,13 +12,14 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--bg);
   color: var(--col);
   font-family: 'Lato', sans-serif;
-
-  /* Untuk membuat scroll pada halaman sementara */
-  height: 5000px;
 }
 
 /* Navbar */
@@ -230,6 +231,7 @@ body {
 .contact .row form {
   flex: 1 1 45%;
   padding: 3rem 2rem;
+  text-align: center;
 }
 
 .contact .row form .input-group {
@@ -249,8 +251,45 @@ body {
   padding: 1.3rem;
 }
 
+.contact .row form .btn-submit {
+  display: inline-block;
+  background-color: var(--col);
+  color: var(--bg);
+  margin-top: 2rem;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--bg);
+  cursor: pointer;
+}
+
+.contact .row form .btn-submit:hover {
+  background-color: var(--primary);
+}
+
+/* Footer */
+footer {
+  background-color: var(--col);
+  color: var(--bg);
+  padding: 2rem 0;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+footer h3 {
+  font: italic small-caps 700 1.5rem 'Ubuntu', sans-serif;
+}
+
+footer .sosmed a {
+  display: inline-block;
+  color: var(--bg);
+  margin: 1rem;
+  font-size: 2rem;
+}
 
 
+footer p {
+  font-size: 0.8rem;
+}
 
 
 /* Responsive breakpoint */
@@ -347,6 +386,10 @@ body {
 
   .contact .row form {
     padding: 0;
+  }
+
+  .contact .row form .btn-submit {
+    width: 50%;
   }
 }
 
