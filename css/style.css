@@ -126,19 +126,22 @@ body {
 
 /* About */
 .about,
-.menu {
+.menu,
+.contact {
   padding: 4rem 7% 1rem;
 }
 
 .about h2,
-.menu h2 {
+.menu h2,
+.contact h2 {
   margin-bottom: 1rem;
   font-size: 2.5rem;
   text-align: center;
 }
 
 .about h2 span,
-.menu h2 span {
+.menu h2 span,
+.contact h2 span {
   color: var(--primary);
 }
 
@@ -206,6 +209,47 @@ body {
   margin-top: 0.5rem;
   font-weight: 200;
 }
+
+/* Contact */
+.contact p {
+  text-align: center;
+}
+
+.contact .row {
+  display: flex;
+  background-color: #575b6b;
+  margin-top: 2rem;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  border: none;
+}
+
+.contact .row form {
+  flex: 1 1 45%;
+  padding: 3rem 2rem;
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  margin-top: 2rem;
+  padding-left: 1.5rem;
+  border: 1px solid var(--col);
+}
+
+.contact .row form .input-group input {
+  background: none;
+  border: none;
+  color: var(--col);
+  width: 100%;
+  padding: 1.3rem;
+}
+
+
 
 
 
@@ -294,6 +338,15 @@ body {
 
   .menu .row .menu-card .menu-card-price {
     font-size: 1.3rem;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
+    background: none;
+  }
+
+  .contact .row form {
+    padding: 0;
   }
 }
 
