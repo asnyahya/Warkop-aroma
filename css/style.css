@@ -71,6 +71,35 @@ body {
   display: none;
 }
 
+.search-form {
+  position: absolute;
+  top: 100%;
+  right: 10%;
+  display: flex;
+  align-items: center;
+  background-color: var(--primary);
+  width: 20rem;
+  height: 2rem;
+  padding: 1rem;
+  opacity: 0;
+  transition: .3s;
+}
+
+.search-form.show {
+  opacity: 1;
+}
+
+.search-form #search-box {
+  background: none;
+  border: none;
+  color: var(--bg);
+  width: 100%;
+  padding-right: 1rem;
+}
+
+.search-form label {
+  color: var(--bg);
+}
 
 /* Hero image */
 .hero {
@@ -409,5 +438,9 @@ footer p {
 
   .menu .row .menu-card .menu-card-img {
     width: 40%;
+  }
+
+  .search-form {
+    right: 5%;
   }
 }
