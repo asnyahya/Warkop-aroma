@@ -25,6 +25,6 @@ document.addEventListener('click', function (e) {
   }
   // Kondisi untuk search
   if (!searchBtn.contains(e.target) && !searchForm.contains(e.target)) {
-    searchForm.classList.toggle('show');
+    searchForm.classList.remove('show');
   }
 });
